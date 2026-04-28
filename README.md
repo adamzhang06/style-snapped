@@ -101,17 +101,15 @@ The model and processor are exported via `save_pretrained()` and loaded locally 
 ### 1 — Backend
 
 ```bash
-cd backend
-
-# Create and activate a virtual environment
+# Create and activate a virtual environment (from project root)
 python -m venv venv
 source venv/bin/activate          # Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 
 # Start the server
-uvicorn main:app --reload
+cd backend && uvicorn main:app --reload
 ```
 
 The API will be live at `http://localhost:8000`.  
