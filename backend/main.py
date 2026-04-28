@@ -45,3 +45,8 @@ async def predict(file: UploadFile = File(...)):
     vibe = model.config.id2label[predicted_idx.item()]
 
     return {"vibe": vibe, "confidence": round(confidence.item() * 100, 1)}
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
