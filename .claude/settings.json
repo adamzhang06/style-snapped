@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import json; cfg=json.load\\(open\\('/Users/adamzhang/Projects/style-vibe-classifier/backend/my_vibe_model/config.json'\\)\\); print\\('id2label:', cfg.get\\('id2label'\\)\\); print\\('num_labels:', cfg.get\\('num_labels'\\)\\)\")",
+      "Bash(/Users/adamzhang/Projects/style-vibe-classifier/backend/venv/bin/python --version)",
+      "Bash(/Users/adamzhang/Projects/style-vibe-classifier/backend/venv/bin/pip list *)"
+    ]
+  }
+}
