@@ -5,7 +5,7 @@ only on former "Smart Casual / Office" rows to split into Business Casual / Busi
 import os
 import time
 
-import google.generativeai as genai  # type: ignore
+from google import genai
 import pandas as pd
 from datasets import load_dataset
 from dotenv import load_dotenv
@@ -19,6 +19,8 @@ if not API_KEY:
     raise ValueError("🚨 GEMINI_API_KEY not found!")
 if not HF_TOKEN:
     raise ValueError("🚨 HF_TOKEN not found!")
+
+MODEL = "gemini-3-flash-preview"
 
 CSV_FILE = os.path.normpath(
     os.path.join(os.path.dirname(__file__), "../my_vibe_model_2/synthetic_aesthetics.csv")
@@ -57,8 +59,7 @@ if smart_casual_count == 0:
     print("Nothing to re-classify. Done.")
     exit(0)
 
-genai.configure(api_key=API_KEY)
-gemini = genai.GenerativeModel("gemini-2.5-flash")  # type: ignore
+client = genai.Client(api_key=API_KEY)
 
 print("Loading HF dataset...")
 dataset = load_dataset("ashraq/fashion-product-images-small", split="train", token=HF_TOKEN)
@@ -87,7 +88,7 @@ for idx in df[smart_casual_mask].index:
     retries = 0
     while not success and retries < 3:
         try:
-            response = gemini.generate_content(contents=[image, split_prompt])
+            response = client.models.generate_content(model=MODEL, contents=[image, split_prompt])
             result = response.text.strip()
             if result in VALID:
                 df.at[idx, "vibe"] = result

@@ -11,6 +11,7 @@ tqdm
 
 # Model training
 google-generativeai
+google-genai
 pandas
 datasets
 pillow

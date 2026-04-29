@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 import os
-import google.generativeai as genai
+from google import genai
 from datasets import load_dataset
 from dotenv import load_dotenv
 
@@ -16,23 +16,11 @@ if not API_KEY:
 if not HF_TOKEN:
     raise ValueError("🚨 HF_TOKEN not found! Add it to your .env file.")
 
-NUM_SAMPLES = 3000
+NUM_SAMPLES = 5000
+MODEL = "gemini-3-flash-preview"
 CSV_FILE = os.path.normpath(os.path.join(os.path.dirname(__file__), "../my_vibe_model_2/synthetic_aesthetics.csv"))
 
-genai.configure(api_key=API_KEY) #type: ignore
-# Remove the 'models/' prefix to prevent duplication errors
-
-# First model ran out of RPD
-# model = genai.GenerativeModel('gemini-2.5-flash') #type: ignore
-
-# Second model for similar results of gemini-2.5-flash
-model = genai.GenerativeModel('gemini-2.0-flash') #type: ignore
-
-
-# All support for the `google.generativeai` package has ended. It will no longer be receiving 
-# updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
-# See README for more details:
-# https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+client = genai.Client(api_key=API_KEY)
 
 print("Authenticating and loading dataset from Hugging Face...")
 # 3. ADD THE TOKEN TO THE DATASET LOADER
@@ -102,8 +90,8 @@ try:
         retries = 0
         while not success and retries < 3:
             try:
-                response = model.generate_content(
-                    contents=[image, prompt]
+                response = client.models.generate_content(
+                    model=MODEL, contents=[image, prompt]
                 )
                 vibe = response.text.strip()
                 
