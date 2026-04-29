@@ -9,12 +9,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 from torchvision import models, transforms
 
-# --- New model (ResNet50, my_vibe_model_2) ---
-MODEL_DIR = Path(__file__).parent / "my_vibe_model_2"
-
-# --- Old model (HuggingFace ViT, my_vibe_model) ---
-# from transformers import AutoImageProcessor, AutoModelForImageClassification
-# MODEL_DIR = Path(__file__).parent / "my_vibe_model"
+# --- Model 1 (ResNet50, 1_my_vibe_model) ---
+MODEL_DIR = Path(__file__).parent / "1_my_vibe_model"
 
 app = FastAPI()
 
@@ -26,21 +22,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- New model loading ---
 try:
     with open(MODEL_DIR / "label_classes.json") as f:
         label_classes = json.load(f)
 
     num_classes = len(label_classes)
     _resnet = models.resnet50(weights=None)
-    _resnet.fc = nn.Sequential( #type: ignore[assignment]
+    _resnet.fc = nn.Sequential(  # type: ignore[assignment]
         nn.Dropout(p=0.4),
         nn.Linear(_resnet.fc.in_features, num_classes),
     )
     _resnet.load_state_dict(torch.load(MODEL_DIR / "resnet50_vibe.pt", map_location="cpu"))
     _resnet.eval()
     model = _resnet
-    
+
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
@@ -54,42 +49,21 @@ except Exception as e:
     transform = None
     label_classes = []
 
-# --- Old model loading ---
-# try:
-#     processor = AutoImageProcessor.from_pretrained(MODEL_DIR)
-#     model = AutoModelForImageClassification.from_pretrained(MODEL_DIR)
-#     model.eval()
-#     print(f"✓ Model loaded from {MODEL_DIR}")
-# except Exception as e:
-#     print(f"⚠ Failed to load model from {MODEL_DIR}: {e}")
-#     processor = None
-#     model = None
-
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     image = Image.open(io.BytesIO(await file.read())).convert("RGB")
 
-    # --- New model inference ---
-    tensor = transform(image).unsqueeze(0) #type: ignore[call-overload]
+    tensor = transform(image).unsqueeze(0)  # type: ignore[call-overload]
     with torch.no_grad():
-        logits = model(tensor) #type: ignore[call]
+        logits = model(tensor)  # type: ignore[call]
     probabilities = torch.softmax(logits, dim=-1)[0]
 
     top_probs, top_idxs = probabilities.topk(min(3, len(label_classes)))
     top_k = [
-        {"vibe": label_classes[idx.item()], "confidence": round(prob.item() * 100, 1)} #type: ignore[index]
+        {"vibe": label_classes[idx.item()], "confidence": round(prob.item() * 100, 1)}  # type: ignore[index]
         for idx, prob in zip(top_idxs, top_probs)
     ]
-
-    # --- Old model inference ---
-    # inputs = processor(images=image, return_tensors="pt")
-    # with torch.no_grad():
-    #     logits = model(**inputs).logits
-    # probabilities = torch.softmax(logits, dim=-1)[0]
-    # confidence, predicted_idx = probabilities.max(dim=-1)
-    # vibe = model.config.id2label[predicted_idx.item()]
-
     return {"vibe": top_k[0]["vibe"], "confidence": top_k[0]["confidence"], "top_k": top_k}
 
 

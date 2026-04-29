@@ -1,0 +1,5 @@
+Files excluded from GitHub (too large) — share these manually with your partner:
+
+backend/1_my_vibe_model/resnet50_vibe.pt       (~50-90 MB)  Model 1 weights
+backend/2_my_vibe_model/embeddings.npy          (344 MB)     ResNet-50 embeddings for all ~88k images
+backend/2_my_vibe_model/model_v3.pt             (90 MB)      Model 2 weights

@@ -1,4 +1,9 @@
-# 
+# Model weights and large data files (too large for GitHub)
+*.pt
+*.npy
+*.safetensors
+
+#
 /.claude
 /.vscode
 /.vite
