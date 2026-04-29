@@ -16,7 +16,7 @@ if not API_KEY:
 if not HF_TOKEN:
     raise ValueError("🚨 HF_TOKEN not found! Add it to your .env file.")
 
-NUM_SAMPLES = 2000
+NUM_SAMPLES = 5000
 CSV_FILE = os.path.normpath(os.path.join(os.path.dirname(__file__), "../my_vibe_model_2/synthetic_aesthetics.csv"))
 
 genai.configure(api_key=API_KEY) #type: ignore
