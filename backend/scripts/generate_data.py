@@ -16,12 +16,18 @@ if not API_KEY:
 if not HF_TOKEN:
     raise ValueError("🚨 HF_TOKEN not found! Add it to your .env file.")
 
-NUM_SAMPLES = 5000
+NUM_SAMPLES = 3000
 CSV_FILE = os.path.normpath(os.path.join(os.path.dirname(__file__), "../my_vibe_model_2/synthetic_aesthetics.csv"))
 
 genai.configure(api_key=API_KEY) #type: ignore
 # Remove the 'models/' prefix to prevent duplication errors
-model = genai.GenerativeModel('gemini-2.5-flash') #type: ignore
+
+# First model ran out of RPD
+# model = genai.GenerativeModel('gemini-2.5-flash') #type: ignore
+
+# Second model for similar results of gemini-2.5-flash
+model = genai.GenerativeModel('gemini-2.0-flash') #type: ignore
+
 
 # All support for the `google.generativeai` package has ended. It will no longer be receiving 
 # updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
