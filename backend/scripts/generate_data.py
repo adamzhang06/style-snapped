@@ -16,8 +16,8 @@ if not API_KEY:
 if not HF_TOKEN:
     raise ValueError("🚨 HF_TOKEN not found! Add it to your .env file.")
 
-NUM_SAMPLES = 5000
-MODEL = "gemini-3-flash-preview"
+NUM_SAMPLES = 6000
+MODEL = "gemini-3.1-flash-lite-preview"
 CSV_FILE = os.path.normpath(os.path.join(os.path.dirname(__file__), "../my_vibe_model_2/synthetic_aesthetics.csv"))
 
 client = genai.Client(api_key=API_KEY)
@@ -88,30 +88,33 @@ try:
         
         success = False
         retries = 0
-        while not success and retries < 3:
+        while not success and retries < 4:
             try:
                 response = client.models.generate_content(
                     model=MODEL, contents=[image, prompt]
                 )
-                vibe = response.text.strip()
-                
+                vibe = response.text.strip() #type: ignore[assignment]
+
                 if vibe not in categories and vibe != "DROP":
                     vibe = "Everyday Minimalist"
-                
+
                 results.append({"image_id": image_id, "vibe": vibe})
                 processed_ids.add(image_id) # Mark as done
                 success = True
-            
+
             except Exception as e:
                 error_msg = str(e)
-                if "503" in error_msg or "500" in error_msg:
+                if "503" in error_msg or "500" in error_msg or "429" in error_msg:
                     retries += 1
-                    print(f"⚠️ Server blip (503) at {i}. Retry {retries}/3...")
-                    time.sleep(3)
+                    wait = 5 * (2 ** retries)  # 10s, 20s, 40s, 80s
+                    print(f"⚠️ Server blip at {i}. Retry {retries}/4 (waiting {wait}s)...")
+                    time.sleep(wait)
                 else:
                     print(f"❌ Error at {i}: {e}")
                     time.sleep(5)
-                    retries = 3 # Skip on fatal errors
+                    retries = 4  # Skip on fatal errors
+
+        time.sleep(0.5)  # Throttle between requests to stay under rate limits
 
         # Save every 20 images to your MacBook SSD
         if i % 20 == 0:

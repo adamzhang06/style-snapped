@@ -75,8 +75,12 @@ async def predict(file: UploadFile = File(...)):
     with torch.no_grad():
         logits = model(tensor) #type: ignore[call]
     probabilities = torch.softmax(logits, dim=-1)[0]
-    confidence, predicted_idx = probabilities.max(dim=-1)
-    vibe = label_classes[predicted_idx.item()] #type: ignore[index]
+
+    top_probs, top_idxs = probabilities.topk(min(3, len(label_classes)))
+    top_k = [
+        {"vibe": label_classes[idx.item()], "confidence": round(prob.item() * 100, 1)} #type: ignore[index]
+        for idx, prob in zip(top_idxs, top_probs)
+    ]
 
     # --- Old model inference ---
     # inputs = processor(images=image, return_tensors="pt")
@@ -86,7 +90,7 @@ async def predict(file: UploadFile = File(...)):
     # confidence, predicted_idx = probabilities.max(dim=-1)
     # vibe = model.config.id2label[predicted_idx.item()]
 
-    return {"vibe": vibe, "confidence": round(confidence.item() * 100, 1)}
+    return {"vibe": top_k[0]["vibe"], "confidence": top_k[0]["confidence"], "top_k": top_k}
 
 
 if __name__ == "__main__":
