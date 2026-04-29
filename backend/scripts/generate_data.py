@@ -37,34 +37,31 @@ dataset = load_dataset(
 )
 
 categories = [
-    "Streetwear", "Techwear / Gorpcore", "Y2K", "Old Money / Quiet Luxury", 
-    "Cottagecore", "Athleisure", "Grunge", "Boho Chic", "Casual Basics", 
-    "Smart Casual / Office", "Traditional / Ethnic Wear", "Loungewear / Sleepwear"
+    "Casual Basics", "Business Casual", "Business Formal",
+    "Streetwear", "Athleisure", "Loungewear / Sleepwear",
+    "Traditional / Ethnic Wear", "Boho / Cottagecore", "Edgy / Alternative"
 ]
 
 prompt = """
 You are an expert fashion stylist classifying e-commerce clothing items.
 
 STEP 1: THE FILTER (CRITICAL)
-Look at the item. Is it a watch, wallet, belt, basic underwear, socks, standard footwear, or a highly generic accessory? 
+Look at the item. Is it a watch, wallet, belt, basic underwear, socks, standard footwear, or a highly generic accessory?
 If YES, you must output EXACTLY the word: DROP
 
 STEP 2: CLASSIFICATION
-If the item is a core clothing piece (shirt, pants, jacket, dress), classify it into the single BEST category below. 
+If the item is a core clothing piece (shirt, pants, jacket, dress), classify it into the single BEST category below.
 
 AESTHETIC DEFINITIONS:
-- Streetwear: Graphic tees, hoodies, bold sneakers, urban culture.
-- Techwear / Gorpcore: Cargo pants, heavy jackets, utilitarian gear, weather-resistant materials.
-- Y2K: Bright colors, crop tops, wide-leg denim, playful, early 2000s.
-- Old Money / Quiet Luxury: High-end knitwear, tailored pieces, elegant. (NO sports logos).
-- Cottagecore: Floral prints, flowy dresses, earthy tones, rustic and romantic.
-- Athleisure: Gym wear, leggings, track pants, sports brand logos. (e.g., Nike, Puma).
-- Grunge: Plaid flannels, distressed denim, dark/washed-out tones, edgy.
-- Boho Chic: Flowy garments, earthy tones, fringe, festival wear.
-- Casual Basics: Plain t-shirts, standard denim, simple unbranded hoodies. The ultimate neutral wardrobe staples.
-- Smart Casual / Office: Button-down collared shirts, chinos, blazers, formal trousers, workwear.
-- Traditional / Ethnic Wear: Kurtas, sarees, traditional tunics, cultural motifs. 
+- Casual Basics: Plain t-shirts, standard denim, simple unbranded hoodies. Neutral wardrobe staples with no strong style signal.
+- Business Casual: Button-down/oxford shirts, chinos, single blazers, loafers. Mix-and-match professional pieces — smart but not strictly formal.
+- Business Formal: Full suits, dress shirts, formal trousers, ties, suit jackets. Structured, matched, strictly professional.
+- Streetwear: Graphic tees, hoodies with bold prints, urban culture. Recognizable streetwear brands or loud graphics.
+- Athleisure: Gym wear, leggings, track pants, sports brand logos (e.g., Nike, Puma, Adidas).
 - Loungewear / Sleepwear: Pajamas, sweatpants, robes, extremely relaxed home wear.
+- Traditional / Ethnic Wear: Kurtas, sarees, traditional tunics, cultural motifs.
+- Boho / Cottagecore: Flowy garments, floral prints, earthy tones, fringe, romantic or rustic — covers both boho and cottagecore styles.
+- Edgy / Alternative: Distressed denim, plaid flannels, dark/washed-out tones, cargo pants, bold Y2K silhouettes, or any other edgy/alternative aesthetic.
 
 Output ONLY the exact category name or the word DROP. Do not include any punctuation, markdown, or explanations.
 """

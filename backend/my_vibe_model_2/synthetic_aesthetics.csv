@@ -1,22 +1,22 @@
 image_id,vibe
-15970,Smart Casual / Office
+15970,Business Casual
 39386,Casual Basics
 59263,DROP
 21379,Athleisure
 53759,Athleisure
 1855,Streetwear
-30805,Smart Casual / Office
-26960,Smart Casual / Office
+30805,Business Casual
+26960,Business Casual
 29114,DROP
 30039,DROP
 9204,DROP
 48123,DROP
 18653,DROP
-47957,Boho Chic
+47957,Boho / Cottagecore
 46885,DROP
-12369,Smart Casual / Office
+12369,Business Casual
 29928,DROP
-42419,Cottagecore
+42419,Boho / Cottagecore
 51832,DROP
 47359,DROP
 17429,DROP
@@ -29,25 +29,25 @@ image_id,vibe
 7990,Casual Basics
 56019,DROP
 21977,DROP
-37812,Smart Casual / Office
+37812,Business Casual
 4729,Streetwear
-56825,Smart Casual / Office
+56825,Business Casual
 39988,DROP
 59051,DROP
 20099,Traditional / Ethnic Wear
 58183,DROP
 29742,DROP
 51658,DROP
-3954,Y2K
+3954,Edgy / Alternative
 18839,DROP
 2886,DROP
 23278,DROP
-28690,Cottagecore
-8580,Smart Casual / Office
+28690,Boho / Cottagecore
+8580,Business Casual
 3168,DROP
 18005,Athleisure
 17871,DROP
-9452,Smart Casual / Office
+9452,Business Casual
 38402,DROP
 44984,DROP
 10268,DROP
@@ -56,7 +56,7 @@ image_id,vibe
 59435,DROP
 5891,Casual Basics
 38630,Athleisure
-4943,Smart Casual / Office
+4943,Business Casual
 11188,DROP
 10866,Streetwear
 59607,Traditional / Ethnic Wear
@@ -69,9 +69,9 @@ image_id,vibe
 6628,DROP
 54924,DROP
 26538,DROP
-35913,Old Money / Quiet Luxury
+35913,Edgy / Alternative
 49495,DROP
-9660,Smart Casual / Office
+9660,Business Casual
 2288,Athleisure
 23876,Casual Basics
 18237,Casual Basics
@@ -88,10 +88,10 @@ image_id,vibe
 44970,DROP
 39524,DROP
 33822,DROP
-58513,Boho Chic
+58513,Boho / Cottagecore
 25947,Casual Basics
 5865,Streetwear
-39716,Smart Casual / Office
+39716,Business Casual
 25349,DROP
 11940,DROP
 55802,Loungewear / Sleepwear
@@ -107,14 +107,14 @@ image_id,vibe
 9694,Casual Basics
 23882,DROP
 34835,DROP
-15984,Smart Casual / Office
+15984,Business Casual
 41268,DROP
 11518,DROP
 14856,DROP
 33648,DROP
-59297,Smart Casual / Office
+59297,Business Casual
 28032,DROP
-27846,Smart Casual / Office
+27846,Business Formal
 26994,Athleisure
 49839,DROP
 31923,Casual Basics
@@ -125,7 +125,7 @@ image_id,vibe
 13841,DROP
 28200,DROP
 12993,DROP
-7158,Grunge
+7158,Edgy / Alternative
 18495,DROP
 8110,DROP
 19547,Casual Basics
@@ -136,12 +136,12 @@ image_id,vibe
 41866,DROP
 58177,DROP
 44528,DROP
-16392,Smart Casual / Office
-51455,Y2K
+16392,Business Casual
+51455,Edgy / Alternative
 50587,DROP
-17240,Smart Casual / Office
+17240,Business Casual
 47530,DROP
-6617,Grunge
+6617,Edgy / Alternative
 12732,DROP
 3365,Streetwear
 42042,DROP
@@ -163,7 +163,7 @@ image_id,vibe
 4140,DROP
 36795,DROP
 40527,DROP
-10257,Smart Casual / Office
+10257,Business Formal
 24062,Streetwear
 45869,DROP
 11385,Athleisure
@@ -171,7 +171,7 @@ image_id,vibe
 44187,DROP
 21510,DROP
 51667,DROP
-22395,Smart Casual / Office
+22395,Business Casual
 35322,DROP
 6425,DROP
 18806,DROP
@@ -179,14 +179,14 @@ image_id,vibe
 17072,DROP
 31782,Casual Basics
 42270,DROP
-12500,Smart Casual / Office
+12500,Business Casual
 26735,DROP
 30650,Athleisure
 56026,DROP
 21948,DROP
 32563,Casual Basics
 58980,DROP
-40143,Y2K
+40143,Edgy / Alternative
 10633,DROP
 24406,Traditional / Ethnic Wear
 4716,DROP
@@ -194,14 +194,14 @@ image_id,vibe
 15341,Athleisure
 52486,Casual Basics
 53554,DROP
-14293,Smart Casual / Office
+14293,Business Casual
 47366,DROP
-6041,Smart Casual / Office
-23623,Y2K
+6041,Business Casual
+23623,Edgy / Alternative
 17416,DROP
 9835,Streetwear
 29319,DROP
-7193,Grunge
+7193,Edgy / Alternative
 12958,DROP
 27283,Traditional / Ethnic Wear
 30234,DROP
@@ -218,13 +218,13 @@ image_id,vibe
 13284,Athleisure
 54543,DROP
 55491,DROP
-26163,Smart Casual / Office
+26163,Business Formal
 3701,Streetwear
 29917,DROP
 42426,Traditional / Ethnic Wear
 32751,DROP
 56214,DROP
-10401,Smart Casual / Office
+10401,Business Casual
 40371,Casual Basics
 21346,DROP
 45603,DROP
@@ -235,7 +235,7 @@ image_id,vibe
 32597,Casual Basics
 58974,DROP
 33445,DROP
-57100,Smart Casual / Office
+57100,Business Casual
 36137,DROP
 41859,DROP
 21180,DROP
@@ -248,15 +248,15 @@ image_id,vibe
 47392,DROP
 50325,Traditional / Ethnic Wear
 8913,DROP
-16530,Smart Casual / Office
+16530,Business Casual
 22705,DROP
-7167,Smart Casual / Office
+7167,Business Casual
 46240,Traditional / Ethnic Wear
 27277,Traditional / Ethnic Wear
 13042,DROP
-6889,Smart Casual / Office
+6889,Business Casual
 31312,Traditional / Ethnic Wear
-12190,Smart Casual / Office
+12190,Business Casual
 55657,DROP
 19578,Casual Basics
 27879,Casual Basics
@@ -269,7 +269,7 @@ image_id,vibe
 43500,Streetwear
 2627,DROP
 27045,DROP
-13270,Y2K
+13270,Edgy / Alternative
 18698,DROP
 55465,DROP
 26197,DROP
@@ -280,28 +280,28 @@ image_id,vibe
 40385,Streetwear
 15187,Athleisure
 44725,DROP
-14055,Smart Casual / Office
+14055,Business Casual
 20260,Casual Basics
 7731,DROP
 22153,DROP
 43958,DROP
 28469,Casual Basics
 50573,DROP
-34036,Smart Casual / Office
-8779,Smart Casual / Office
-3391,Old Money / Quiet Luxury
+34036,Business Casual
+8779,Business Formal
+3391,Edgy / Alternative
 43164,DROP
 2243,Athleisure
 30496,DROP
 27421,Loungewear / Sleepwear
 57756,DROP
 33213,Traditional / Ethnic Wear
-39729,Boho Chic
+39729,Boho / Cottagecore
 25376,Casual Basics
-11143,Smart Casual / Office
+11143,Business Casual
 56684,Traditional / Ethnic Wear
-4988,Y2K
-44341,Smart Casual / Office
+4988,Edgy / Alternative
+44341,Business Casual
 14431,DROP
 20604,DROP
 52224,DROP
@@ -309,7 +309,7 @@ image_id,vibe
 36761,DROP
 33021,Traditional / Ethnic Wear
 25144,DROP
-11371,Smart Casual / Office
+11371,Business Casual
 41401,Casual Basics
 14603,DROP
 37481,DROP
@@ -330,8 +330,8 @@ image_id,vibe
 55233,DROP
 13426,Casual Basics
 43356,DROP
-28207,Y2K
-13846,Smart Casual / Office
+28207,Edgy / Alternative
+13846,Business Casual
 12994,DROP
 46278,Traditional / Ethnic Wear
 16508,Casual Basics
@@ -348,7 +348,7 @@ image_id,vibe
 5608,DROP
 58170,DROP
 53598,DROP
-15983,Smart Casual / Office
+15983,Business Formal
 39375,DROP
 14851,DROP
 59290,DROP
@@ -359,13 +359,13 @@ image_id,vibe
 28035,DROP
 31924,DROP
 26993,Casual Basics
-13248,Techwear / Gorpcore
+13248,Edgy / Alternative
 43538,Casual Basics
 8325,Athleisure
 31118,Casual Basics
 19772,DROP
 46876,DROP
-5862,Smart Casual / Office
+5862,Business Casual
 39711,DROP
 14409,DROP
 58726,Athleisure
@@ -377,18 +377,18 @@ image_id,vibe
 55805,Loungewear / Sleepwear
 7709,Casual Basics
 28451,Athleisure
-43960,Smart Casual / Office
-8741,Smart Casual / Office
+43960,Business Casual
+8741,Business Casual
 55039,DROP
 19316,DROP
 27419,Athleisure
 34832,DROP
 23885,DROP
 19918,DROP
-22359,Smart Casual / Office
+22359,Business Casual
 19124,DROP
 16950,DROP
-49654,Cottagecore
+49654,Boho / Cottagecore
 48786,DROP
 2049,Athleisure
 17882,DROP
@@ -398,8 +398,8 @@ image_id,vibe
 39523,DROP
 52812,DROP
 11349,Casual Basics
-24892,Smart Casual / Office
-58514,Y2K
+24892,Business Casual
+58514,Edgy / Alternative
 33825,DROP
 25940,DROP
 38637,Streetwear
@@ -407,7 +407,7 @@ image_id,vibe
 4944,Casual Basics
 10861,Streetwear
 59600,Traditional / Ethnic Wear
-42846,Boho Chic
+42846,Boho / Cottagecore
 35128,DROP
 47508,DROP
 54923,Athleisure
@@ -416,19 +416,19 @@ image_id,vibe
 31588,Streetwear
 49492,DROP
 18230,Streetwear
-23871,Smart Casual / Office
-9667,Smart Casual / Office
+23871,Business Casual
+9667,Business Casual
 16198,Athleisure
 3953,Streetwear
 29745,DROP
 28697,Traditional / Ethnic Wear
 12538,Loungewear / Sleepwear
-8587,Smart Casual / Office
-42248,Smart Casual / Office
+8587,Business Casual
+42248,Business Casual
 48772,DROP
 17876,Casual Basics
 30668,DROP
-9455,Smart Casual / Office
+9455,Business Formal
 18002,Athleisure
 44983,DROP
 38405,DROP
@@ -438,7 +438,7 @@ image_id,vibe
 24866,DROP
 53108,DROP
 21528,DROP
-59432,Old Money / Quiet Luxury
+59432,Edgy / Alternative
 32903,Casual Basics
 6079,Casual Basics
 12960,DROP
@@ -446,8 +446,8 @@ image_id,vibe
 9031,DROP
 6845,DROP
 18466,DROP
-26369,Smart Casual / Office
-33489,Smart Casual / Office
+26369,Business Casual
+33489,Business Casual
 59056,DROP
 15379,DROP
 45409,DROP
@@ -455,13 +455,13 @@ image_id,vibe
 58184,DROP
 40947,Athleisure
 39381,Casual Basics
-15977,Smart Casual / Office
+15977,Business Formal
 32769,Casual Basics
-10439,Grunge
+10439,Edgy / Alternative
 59264,DROP
-14099,Boho Chic
+14099,Boho / Cottagecore
 1852,Streetwear
-30802,Smart Casual / Office
+30802,Business Casual
 51009,DROP
 29113,DROP
 7399,DROP
@@ -473,10 +473,10 @@ image_id,vibe
 3739,DROP
 19786,Athleisure
 44948,DROP
-24091,Smart Casual / Office
+24091,Business Casual
 33026,Traditional / Ethnic Wear
 41406,Casual Basics
-11376,Smart Casual / Office
+11376,Business Casual
 25143,DROP
 44174,DROP
 5253,Athleisure
@@ -494,17 +494,17 @@ image_id,vibe
 50746,DROP
 34203,Loungewear / Sleepwear
 55234,DROP
-13421,Smart Casual / Office
-27614,Smart Casual / Office
+13421,Business Casual
+27614,Business Casual
 22154,DROP
-16361,Smart Casual / Office
+16361,Business Casual
 46411,Streetwear
 7736,DROP
-34031,Smart Casual / Office
+34031,Business Casual
 50574,DROP
 22968,DROP
 3396,DROP
-31543,Smart Casual / Office
+31543,Business Casual
 19329,DROP
 13613,Athleisure
 27426,Loungewear / Sleepwear
@@ -512,14 +512,14 @@ image_id,vibe
 43163,DROP
 33214,Traditional / Ethnic Wear
 10096,DROP
-11144,Smart Casual / Office
+11144,Business Casual
 25371,Casual Basics
 20603,DROP
 58719,Traditional / Ethnic Wear
 11978,DROP
 36766,DROP
 45294,DROP
-52223,Boho Chic
+52223,Boho / Cottagecore
 34455,DROP
 6280,Streetwear
 46075,DROP
@@ -529,7 +529,7 @@ image_id,vibe
 2620,Streetwear
 43507,Streetwear
 28836,Traditional / Ethnic Wear
-31127,Old Money / Quiet Luxury
+31127,Edgy / Alternative
 26190,DROP
 55462,DROP
 11520,Casual Basics
@@ -540,15 +540,15 @@ image_id,vibe
 57335,DROP
 52647,DROP
 20267,DROP
-14052,Smart Casual / Office
+14052,Business Casual
 53795,Streetwear
 44722,DROP
 5405,DROP
 39178,Traditional / Ethnic Wear
 32590,Casual Basics
-11712,Smart Casual / Office
+11712,Business Casual
 25527,Casual Basics
-57107,Smart Casual / Office
+57107,Business Casual
 20869,DROP
 33442,DROP
 58973,DROP
@@ -559,7 +559,7 @@ image_id,vibe
 20055,DROP
 50322,Traditional / Ethnic Wear
 28238,DROP
-13879,Smart Casual / Office
+13879,Business Casual
 47395,DROP
 46247,Traditional / Ethnic Wear
 7160,Traditional / Ethnic Wear
@@ -569,7 +569,7 @@ image_id,vibe
 43735,DROP
 13045,DROP
 27270,Traditional / Ethnic Wear
-12197,Smart Casual / Office
+12197,Business Casual
 55650,DROP
 31315,Traditional / Ethnic Wear
 6274,Casual Basics
@@ -577,7 +577,7 @@ image_id,vibe
 17623,Athleisure
 48927,DROP
 51036,Loungewear / Sleepwear
-26958,Smart Casual / Office
+26958,Business Casual
 46081,DROP
 35573,DROP
 13283,Casual Basics
@@ -585,20 +585,20 @@ image_id,vibe
 30001,DROP
 29910,DROP
 3706,Casual Basics
-26164,Smart Casual / Office
+26164,Business Formal
 55496,DROP
 56213,DROP
 15948,DROP
 40376,Streetwear
 24633,DROP
-10406,Smart Casual / Office
+10406,Business Casual
 4523,DROP
 45604,DROP
 15174,Casual Basics
 21341,DROP
 53761,Athleisure
-37224,Smart Casual / Office
-32564,Smart Casual / Office
+37224,Business Casual
+32564,Business Casual
 56021,DROP
 24401,Traditional / Ethnic Wear
 10634,DROP
@@ -607,14 +607,14 @@ image_id,vibe
 59069,DROP
 15346,Athleisure
 52481,Loungewear / Sleepwear
-21173,Smart Casual / Office
+21173,Business Casual
 4711,DROP
 40978,Streetwear
 14294,Casual Basics
 17411,DROP
 9832,Streetwear
-23624,Y2K
-6046,Smart Casual / Office
+23624,Edgy / Alternative
+6046,Business Casual
 34693,Casual Basics
 47361,DROP
 7194,Casual Basics
@@ -626,7 +626,7 @@ image_id,vibe
 12163,Athleisure
 42613,DROP
 3534,Streetwear
-24065,Smart Casual / Office
+24065,Business Casual
 10250,DROP
 57597,DROP
 40520,DROP
@@ -651,18 +651,18 @@ image_id,vibe
 17849,Streetwear
 29548,Streetwear
 42879,DROP
-16395,Smart Casual / Office
-51452,Cottagecore
+16395,Business Casual
+51452,Boho / Cottagecore
 6610,Casual Basics
 47537,DROP
 17247,Casual Basics
-23072,Smart Casual / Office
+23072,Business Casual
 42045,DROP
 3362,Streetwear
 12735,DROP
 54120,DROP
 30465,DROP
-9658,Smart Casual / Office
+9658,Business Casual
 43197,DROP
 38608,Streetwear
 24257,DROP
@@ -679,18 +679,18 @@ image_id,vibe
 21725,Athleisure
 34038,Casual Basics
 43956,DROP
-28467,Boho Chic
-16368,Smart Casual / Office
+28467,Boho / Cottagecore
+16368,Business Casual
 42884,DROP
 55833,DROP
 46418,DROP
 48582,DROP
 30498,DROP
-8777,Smart Casual / Office
+8777,Business Casual
 19320,DROP
 25378,Casual Basics
 4986,Athleisure
-39727,Smart Casual / Office
+39727,Business Casual
 5854,DROP
 11971,DROP
 5068,DROP
@@ -727,11 +727,11 @@ image_id,vibe
 7955,Casual Basics
 8121,DROP
 27279,Traditional / Ethnic Wear
-6887,Boho Chic
+6887,Boho / Cottagecore
 31912,Traditional / Ethnic Wear
 49808,DROP
 22539,DROP
-27877,Smart Casual / Office
+27877,Business Casual
 6289,Athleisure
 28003,DROP
 8313,DROP
@@ -743,7 +743,7 @@ image_id,vibe
 2629,DROP
 14867,DROP
 38291,DROP
-11529,Smart Casual / Office
+11529,Business Casual
 41259,DROP
 1890,Athleisure
 15189,Casual Basics
@@ -755,7 +755,7 @@ image_id,vibe
 40971,DROP
 52488,DROP
 59060,Traditional / Ethnic Wear
-4718,Y2K
+4718,Edgy / Alternative
 56814,Traditional / Ethnic Wear
 12956,DROP
 29317,DROP
@@ -765,17 +765,17 @@ image_id,vibe
 19582,Streetwear
 48320,DROP
 9007,DROP
-6873,Smart Casual / Office
+6873,Business Casual
 18450,DROP
 29125,DROP
 26951,Streetwear
-27883,Smart Casual / Office
+27883,Business Casual
 30834,Traditional / Ethnic Wear
 29919,DROP
 42428,Traditional / Ethnic Wear
-12358,Smart Casual / Office
+12358,Business Casual
 48112,DROP
-9235,Smart Casual / Office
+9235,Business Formal
 14893,DROP
 15941,DROP
 53768,Streetwear
@@ -789,16 +789,16 @@ image_id,vibe
 54129,DROP
 23847,DROP
 48576,DROP
-9651,Smart Casual / Office
-8783,Smart Casual / Office
-4972,Smart Casual / Office
+9651,Business Casual
+8783,Business Casual
+4972,Business Casual
 38601,Streetwear
 45269,DROP
 11985,DROP
 59636,Traditional / Ethnic Wear
 15519,DROP
 10857,Casual Basics
-10259,Smart Casual / Office
+10259,Business Formal
 53902,DROP
 38433,DROP
 40529,DROP
@@ -809,11 +809,11 @@ image_id,vibe
 23249,DROP
 18808,DROP
 51669,DROP
-3965,Y2K
-29773,Smart Casual / Office
+3965,Edgy / Alternative
+29773,Business Casual
 48744,DROP
 17840,DROP
-9463,Smart Casual / Office
+9463,Business Casual
 18034,DROP
 16992,DROP
 3159,DROP
@@ -828,14 +828,14 @@ image_id,vibe
 44714,DROP
 5433,Athleisure
 52671,DROP
-59299,Smart Casual / Office
+59299,Business Casual
 49837,DROP
 16733,DROP
 7364,DROP
 34463,DROP
 47191,DROP
 27848,Casual Basics
-31111,Smart Casual / Office
+31111,Business Formal
 55454,DROP
 12393,DROP
 13241,Athleisure
@@ -845,24 +845,24 @@ image_id,vibe
 43531,Casual Basics
 46271,Casual Basics
 35783,DROP
-7156,Grunge
+7156,Edgy / Alternative
 22734,DROP
 8922,DROP
 16501,Streetwear
-50314,Smart Casual / Office
+50314,Business Formal
 34651,DROP
 6084,Casual Basics
-19549,Old Money / Quiet Luxury
+19549,Edgy / Alternative
 49239,Athleisure
 31323,Traditional / Ethnic Wear
 43703,Traditional / Ethnic Wear
 13073,DROP
-57131,Boho Chic
-40186,Cottagecore
+57131,Boho / Cottagecore
+40186,Boho / Cottagecore
 58945,DROP
 33474,DROP
-59897,Boho Chic
-11724,Smart Casual / Office
+59897,Boho / Cottagecore
+11724,Business Casual
 5601,DROP
 20063,DROP
 53591,DROP
@@ -877,13 +877,13 @@ image_id,vibe
 46615,DROP
 19911,DROP
 7532,Streetwear
-22350,Smart Casual / Office
+22350,Business Casual
 16165,DROP
 2040,Athleisure
 30695,DROP
 43367,DROP
 13417,Traditional / Ethnic Wear
-27622,Techwear / Gorpcore
+27622,Edgy / Alternative
 55202,DROP
 3192,Streetwear
 16959,DROP
@@ -898,25 +898,25 @@ image_id,vibe
 11172,Casual Basics
 25347,DROP
 39718,Casual Basics
-41602,Smart Casual / Office
+41602,Business Casual
 33222,Traditional / Ethnic Wear
 24295,DROP
 36750,DROP
 37682,DROP
 34007,Casual Basics
 50542,DROP
-17285,Smart Casual / Office
+17285,Business Casual
 43969,DROP
 28458,Athleisure
 22162,DROP
-16357,Smart Casual / Office
+16357,Business Casual
 46427,DROP
 7700,Casual Basics
 27410,Loungewear / Sleepwear
 2272,Athleisure
 43155,DROP
 42087,DROP
-8748,Smart Casual / Office
+8748,Business Casual
 55030,DROP
 17043,DROP
 50784,DROP
@@ -953,10 +953,10 @@ image_id,vibe
 37676,DROP
 6626,DROP
 47501,DROP
-17271,Smart Casual / Office
+17271,Business Casual
 23044,Athleisure
 22196,DROP
-51464,Boho Chic
+51464,Boho / Cottagecore
 54116,DROP
 30453,Casual Basics
 2286,Athleisure
@@ -968,12 +968,12 @@ image_id,vibe
 26536,DROP
 12703,DROP
 24605,Traditional / Ethnic Wear
-10430,Smart Casual / Office
+10430,Business Casual
 56225,Loungewear / Sleepwear
 39388,Casual Basics
 14090,Casual Basics
 53757,DROP
-37212,Smart Casual / Office
+37212,Business Casual
 4515,DROP
 45632,DROP
 51000,DROP
@@ -986,17 +986,17 @@ image_id,vibe
 29926,DROP
 42417,DROP
 3730,Athleisure
-26152,Smart Casual / Office
-12367,Smart Casual / Office
+26152,Business Casual
+12367,Business Casual
 54572,Traditional / Ethnic Wear
 27080,DROP
 30037,DROP
-46285,Boho Chic
+46285,Boho / Cottagecore
 12969,DROP
 35777,DROP
-51232,Boho Chic
+51232,Boho / Cottagecore
 17427,DROP
-9804,Smart Casual / Office
+9804,Business Casual
 23612,DROP
 6070,Casual Basics
 47357,DROP
@@ -1019,7 +1019,7 @@ image_id,vibe
 53565,DROP
 15370,Casual Basics
 39986,DROP
-21145,Smart Casual / Office
+21145,Business Casual
 4727,Streetwear
 45400,DROP
 38434,DROP
@@ -1030,11 +1030,11 @@ image_id,vibe
 59403,Casual Basics
 21519,DROP
 53139,DROP
-29774,Smart Casual / Office
+29774,Business Casual
 3962,Casual Basics
 18033,DROP
 17847,DROP
-9464,Smart Casual / Office
+9464,Business Casual
 48743,DROP
 16995,DROP
 12509,DROP
@@ -1042,10 +1042,10 @@ image_id,vibe
 47539,DROP
 29546,Athleisure
 42877,DROP
-9656,Smart Casual / Office
+9656,Business Casual
 23840,DROP
 43199,DROP
-18201,Techwear / Gorpcore
+18201,Edgy / Alternative
 35925,DROP
 8784,DROP
 4975,Athleisure
@@ -1055,18 +1055,18 @@ image_id,vibe
 59631,Traditional / Ethnic Wear
 4149,DROP
 10850,Casual Basics
-26956,Y2K
+26956,Edgy / Alternative
 29122,DROP
 51038,DROP
 30833,Traditional / Ethnic Wear
 48929,DROP
-27884,Smart Casual / Office
+27884,Business Casual
 55498,DROP
 3708,Casual Basics
 48115,DROP
 18665,DROP
 47961,DROP
-10408,Smart Casual / Office
+10408,Business Casual
 14894,DROP
 15946,DROP
 1863,Streetwear
@@ -1075,15 +1075,15 @@ image_id,vibe
 58989,DROP
 38050,DROP
 39182,Traditional / Ethnic Wear
-41098,Boho Chic
+41098,Boho / Cottagecore
 21941,DROP
 56813,Traditional / Ethnic Wear
 59067,DROP
 15348,Athleisure
-12951,Smart Casual / Office
-6048,Smart Casual / Office
-13883,Smart Casual / Office
-19585,Smart Casual / Office
+12951,Business Casual
+6048,Business Casual
+13883,Business Casual
+19585,Business Casual
 6874,Casual Basics
 18457,DROP
 9000,DROP
@@ -1091,12 +1091,12 @@ image_id,vibe
 35589,DROP
 31915,DROP
 28004,DROP
-27870,Smart Casual / Office
+27870,Business Casual
 19743,Casual Basics
 49033,DROP
 8314,Casual Basics
-31129,Cottagecore
-43509,Smart Casual / Office
+31129,Boho / Cottagecore
+43509,Business Casual
 18691,DROP
 47995,DROP
 38296,DROP
@@ -1104,9 +1104,9 @@ image_id,vibe
 39344,Casual Basics
 1897,Athleisure
 52649,DROP
-57109,Boho Chic
+57109,Boho / Cottagecore
 36902,DROP
-25529,Smart Casual / Office
+25529,Business Casual
 39176,Traditional / Ethnic Wear
 40982,Streetwear
 58141,DROP
@@ -1114,29 +1114,29 @@ image_id,vibe
 59093,DROP
 41850,DROP
 21189,DROP
-16539,Smart Casual / Office
+16539,Business Casual
 46249,Traditional / Ethnic Wear
-13877,Smart Casual / Office
+13877,Business Casual
 28236,DROP
 8126,DROP
 19571,Streetwear
 12199,Casual Basics
-7952,Smart Casual / Office
-6880,Smart Casual / Office
-11378,Smart Casual / Office
+7952,Business Casual
+6880,Business Casual
+11378,Business Formal
 45894,DROP
 39512,DROP
 52823,DROP
 41408,Streetwear
 33028,Traditional / Ethnic Wear
-25971,Old Money / Quiet Luxury
+25971,Edgy / Alternative
 58525,DROP
 37488,DROP
 2844,Streetwear
 50748,DROP
 28652,Athleisure
-29780,Smart Casual / Office
-22368,Grunge
+29780,Business Casual
+22368,Edgy / Alternative
 3996,DROP
 19929,DROP
 2078,Casual Basics
@@ -1146,7 +1146,7 @@ image_id,vibe
 16961,DROP
 19115,Casual Basics
 28460,Athleisure
-23088,Smart Casual / Office
+23088,Business Casual
 43951,DROP
 55834,DROP
 42883,DROP
@@ -1157,10 +1157,10 @@ image_id,vibe
 3398,DROP
 39720,Casual Basics
 10098,DROP
-5853,Y2K
+5853,Edgy / Alternative
 11976,DROP
 36768,DROP
-44348,Smart Casual / Office
+44348,Business Casual
 14438,DROP
 46282,Traditional / Ethnic Wear
 47350,Casual Basics
@@ -1174,7 +1174,7 @@ image_id,vibe
 13080,DROP
 48318,DROP
 30202,DROP
-33487,Grunge
+33487,Edgy / Alternative
 40175,DROP
 10605,DROP
 56010,DROP
@@ -1183,19 +1183,19 @@ image_id,vibe
 40949,Casual Basics
 45407,DROP
 4720,Loungewear / Sleepwear
-21142,Smart Casual / Office
+21142,Business Casual
 39981,DROP
 59058,Traditional / Ethnic Wear
 15377,DROP
 10437,Casual Basics
 24602,Traditional / Ethnic Wear
-32767,Smart Casual / Office
+32767,Business Casual
 56222,Loungewear / Sleepwear
-37215,Smart Casual / Office
-14097,Smart Casual / Office
+37215,Business Casual
+14097,Business Casual
 53750,Loungewear / Sleepwear
 52682,DROP
-15145,Smart Casual / Office
+15145,Business Casual
 45635,DROP
 4512,DROP
 7397,DROP
@@ -1207,8 +1207,8 @@ image_id,vibe
 47162,DROP
 6245,Casual Basics
 19788,Casual Basics
-12360,Smart Casual / Office
-26155,Smart Casual / Office
+12360,Business Casual
+26155,Business Formal
 3737,DROP
 42410,DROP
 29921,DROP
@@ -1229,10 +1229,10 @@ image_id,vibe
 17276,Streetwear
 47506,Casual Basics
 6621,DROP
-51463,Boho Chic
+51463,Boho / Cottagecore
 42848,DROP
 22191,DROP
-9669,Smart Casual / Office
+9669,Business Casual
 54111,DROP
 12704,DROP
 26531,DROP
@@ -1253,25 +1253,25 @@ image_id,vibe
 17878,Casual Basics
 30666,DROP
 3161,DROP
-8589,Smart Casual / Office
+8589,Business Casual
 12536,Casual Basics
 26703,DROP
 25186,DROP
 1636,DROP
 40511,DROP
-10261,Smart Casual / Office
+10261,Business Casual
 24054,Streetwear
 4344,DROP
-21526,Smart Casual / Office
+21526,Business Casual
 15713,DROP
 53106,DROP
 5296,DROP
 24868,DROP
-41605,Smart Casual / Office
+41605,Business Casual
 25340,DROP
 11175,Casual Basics
 24292,DROP
-33225,Y2K
+33225,Edgy / Alternative
 11949,DROP
 36757,DROP
 37685,DROP
@@ -1280,10 +1280,10 @@ image_id,vibe
 58728,Casual Basics
 50545,DROP
 17282,Streetwear
-34000,Smart Casual / Office
+34000,Business Casual
 7707,Casual Basics
 46420,DROP
-16350,Smart Casual / Office
+16350,Business Casual
 51497,Casual Basics
 22165,DROP
 43152,DROP
@@ -1298,12 +1298,12 @@ image_id,vibe
 23285,DROP
 50777,DROP
 16162,DROP
-22357,Smart Casual / Office
+22357,Business Casual
 19916,DROP
 7535,Athleisure
 46612,DROP
-27625,Smart Casual / Office
-13410,Smart Casual / Office
+27625,Business Casual
+13410,Business Casual
 48788,DROP
 43360,DROP
 2047,Athleisure
@@ -1325,7 +1325,7 @@ image_id,vibe
 16506,Casual Basics
 22733,DROP
 35784,DROP
-7151,Smart Casual / Office
+7151,Business Casual
 46276,Traditional / Ethnic Wear
 13848,Casual Basics
 6083,Streetwear
@@ -1339,7 +1339,7 @@ image_id,vibe
 58942,DROP
 20858,DROP
 40181,DROP
-57136,Smart Casual / Office
+57136,Business Casual
 25516,Streetwear
 39149,Traditional / Ethnic Wear
 59890,Casual Basics
@@ -1358,7 +1358,7 @@ image_id,vibe
 5434,Streetwear
 44713,DROP
 14063,Casual Basics
-20256,Smart Casual / Office
+20256,Business Casual
 52676,DROP
 36333,DROP
 7363,DROP
@@ -1370,22 +1370,22 @@ image_id,vibe
 34464,DROP
 12394,DROP
 46878,DROP
-31116,Techwear / Gorpcore
-43536,Boho Chic
-28807,Smart Casual / Office
+31116,Edgy / Alternative
+43536,Boho / Cottagecore
+28807,Business Casual
 2611,DROP
 13246,Casual Basics
 54581,Traditional / Ethnic Wear
 3763,Streetwear
 29975,DROP
-26101,Smart Casual / Office
+26101,Business Casual
 54521,DROP
-9259,Smart Casual / Office
+9259,Business Casual
 30064,DROP
-16794,Smart Casual / Office
+16794,Business Casual
 51053,DROP
 49890,DROP
-47136,Boho Chic
+47136,Boho / Cottagecore
 6211,Streetwear
 48942,DROP
 23473,DROP
@@ -1399,7 +1399,7 @@ image_id,vibe
 36393,DROP
 4546,DROP
 21324,DROP
-15111,Smart Casual / Office
+15111,Business Formal
 38209,DROP
 40313,DROP
 10463,Casual Basics
@@ -1410,34 +1410,34 @@ image_id,vibe
 44581,Casual Basics
 53536,DROP
 21116,Casual Basics
-15323,Techwear / Gorpcore
+15323,Edgy / Alternative
 56878,DROP
 4774,Athleisure
 57196,Casual Basics
 40121,DROP
-32501,Smart Casual / Office
+32501,Business Casual
 56044,DROP
 11783,Streetwear
 12106,Traditional / Ethnic Wear
 26333,DROP
 3551,DROP
-42676,Smart Casual / Office
+42676,Business Casual
 2483,Casual Basics
 30256,DROP
 54713,Traditional / Ethnic Wear
 51261,DROP
-9857,Smart Casual / Office
+9857,Business Casual
 47304,DROP
 6023,Casual Basics
 21572,DROP
 15747,DROP
 32959,Streetwear
-52080,Smart Casual / Office
+52080,Business Casual
 59468,DROP
 45037,DROP
 4310,Streetwear
-37417,Old Money / Quiet Luxury
-53152,Smart Casual / Office
+37417,Edgy / Alternative
+53152,Business Casual
 14695,Casual Basics
 32165,DROP
 56420,DROP
@@ -1449,7 +1449,7 @@ image_id,vibe
 27685,DROP
 18058,DROP
 3135,DROP
-42212,Smart Casual / Office
+42212,Business Casual
 23225,Traditional / Ethnic Wear
 17010,DROP
 18864,Athleisure
@@ -1457,7 +1457,7 @@ image_id,vibe
 6447,DROP
 7595,DROP
 3909,Loungewear / Sleepwear
-51605,Smart Casual / Office
+51605,Business Casual
 13682,DROP
 54145,DROP
 3307,DROP
@@ -1465,10 +1465,10 @@ image_id,vibe
 55097,DROP
 12750,DROP
 47552,DROP
-54979,Smart Casual / Office
+54979,Business Casual
 6675,DROP
 17222,DROP
-51437,Boho Chic
+51437,Boho / Cottagecore
 35172,DROP
 46480,DROP
 45205,DROP
@@ -1478,12 +1478,12 @@ image_id,vibe
 53360,DROP
 37625,Streetwear
 32357,DROP
-33285,Smart Casual / Office
+33285,Business Casual
 40777,DROP
 10007,Streetwear
-21586,Grunge
-52074,Smart Casual / Office
-14661,Smart Casual / Office
+21586,Edgy / Alternative
+52074,Business Casual
+14661,Business Casual
 20454,DROP
 32191,DROP
 52848,DROP
@@ -1494,15 +1494,15 @@ image_id,vibe
 43334,DROP
 27671,DROP
 54383,DROP
-13444,Y2K
+13444,Edgy / Alternative
 55251,DROP
 31714,DROP
 8529,DROP
 28639,Casual Basics
-50723,Cottagecore
+50723,Boho / Cottagecore
 47794,DROP
 34266,Traditional / Ethnic Wear
-18890,Smart Casual / Office
+18890,Business Casual
 7561,Casual Basics
 19942,DROP
 46646,DROP
@@ -1523,25 +1523,25 @@ image_id,vibe
 14453,DROP
 53394,Traditional / Ethnic Wear
 20666,Casual Basics
-5004,Y2K
+5004,Edgy / Alternative
 25314,DROP
 11121,DROP
-33271,Y2K
+33271,Edgy / Alternative
 40783,DROP
 5838,Streetwear
-31142,Smart Casual / Office
+31142,Business Casual
 3797,DROP
 29981,DROP
-19728,Smart Casual / Office
+19728,Business Casual
 55407,DROP
 27027,Casual Basics
 13212,DROP
-28853,Smart Casual / Office
+28853,Business Casual
 43562,DROP
 50949,Casual Basics
 30090,DROP
 2645,DROP
-16760,Old Money / Quiet Luxury
+16760,Edgy / Alternative
 49864,DROP
 22555,DROP
 46010,Traditional / Ethnic Wear
@@ -1549,7 +1549,7 @@ image_id,vibe
 23487,DROP
 50175,DROP
 58318,DROP
-14037,Grunge
+14037,Edgy / Alternative
 20202,Streetwear
 5460,DROP
 44747,DROP
@@ -1561,47 +1561,47 @@ image_id,vibe
 11545,Casual Basics
 56282,DROP
 37087,DROP
-20030,Smart Casual / Office
+20030,Business Casual
 39921,DROP
 52410,Loungewear / Sleepwear
 4780,Casual Basics
 57162,Casual Basics
 58916,DROP
 33427,DROP
-41007,Y2K
+41007,Edgy / Alternative
 25542,Casual Basics
 11777,Streetwear
 7939,Streetwear
 55635,DROP
 42682,Traditional / Ethnic Wear
 2477,DROP
-27215,Techwear / Gorpcore
+27215,Edgy / Alternative
 7105,DROP
-16552,Smart Casual / Office
+16552,Business Casual
 8971,DROP
 22767,Traditional / Ethnic Wear
 50347,Traditional / Ethnic Wear
 34602,DROP
 59665,Traditional / Ethnic Wear
 14498,DROP
-10804,Smart Casual / Office
+10804,Business Casual
 4921,Casual Basics
 32368,DROP
-39780,Smart Casual / Office
+39780,Business Casual
 40748,DROP
 38652,DROP
 18255,Traditional / Ethnic Wear
 27488,DROP
-9602,Smart Casual / Office
+9602,Business Casual
 23814,DROP
 48525,Casual Basics
 3338,Athleisure
 35971,Streetwear
 19387,DROP
-54946,Smart Casual / Office
-23028,Smart Casual / Office
+54946,Business Casual
+23028,Business Casual
 42823,DROP
-51408,Smart Casual / Office
+51408,Business Casual
 55894,DROP
 7798,Casual Basics
 9430,DROP
@@ -1620,19 +1620,19 @@ image_id,vibe
 38460,DROP
 12139,Traditional / Ethnic Wear
 42649,Casual Basics
-8186,Smart Casual / Office
+8186,Business Casual
 9054,DROP
 30269,DROP
-48373,Smart Casual / Office
+48373,Business Casual
 18403,DROP
 6820,DROP
 12905,DROP
-9868,Smart Casual / Office
+9868,Business Casual
 28296,DROP
-57995,Smart Casual / Office
+57995,Business Casual
 5699,DROP
 40922,Athleisure
-38838,Cottagecore
+38838,Boho / Cottagecore
 59033,DROP
 21129,Casual Basics
 56847,Casual Basics
@@ -1644,11 +1644,11 @@ image_id,vibe
 38236,DROP
 24669,DROP
 56249,Loungewear / Sleepwear
-15912,Smart Casual / Office
+15912,Business Casual
 49093,DROP
 31189,DROP
 18631,Streetwear
-9266,Smart Casual / Office
+9266,Business Casual
 50982,Loungewear / Sleepwear
 28898,DROP
 48141,DROP
@@ -1659,9 +1659,9 @@ image_id,vibe
 17679,DROP
 30867,Traditional / Ethnic Wear
 7906,Casual Basics
-19525,Smart Casual / Office
+19525,Business Casual
 8172,DROP
-48387,Grunge
+48387,Edgy / Alternative
 22758,Traditional / Ethnic Wear
 50378,Traditional / Ethnic Wear
 28262,DROP
@@ -1680,11 +1680,11 @@ image_id,vibe
 49067,DROP
 8340,Streetwear
 46813,Athleisure
-19717,Smart Casual / Office
+19717,Business Casual
 55438,DROP
 27018,Casual Basics
 50976,DROP
-29182,Smart Casual / Office
+29182,Business Casual
 31941,DROP
 7308,Casual Basics
 30893,Traditional / Ethnic Wear
@@ -1697,7 +1697,7 @@ image_id,vibe
 13649,DROP
 34857,DROP
 22932,DROP
-8724,Smart Casual / Office
+8724,Business Casual
 35985,Streetwear
 47599,DROP
 28434,DROP
@@ -1734,7 +1734,7 @@ image_id,vibe
 42685,Traditional / Ethnic Wear
 55632,DROP
 13027,DROP
-27212,Smart Casual / Office
+27212,Business Casual
 43757,DROP
 22760,Traditional / Ethnic Wear
 16555,Casual Basics
@@ -1766,9 +1766,9 @@ image_id,vibe
 36360,DROP
 45692,DROP
 57357,DROP
-10490,Smart Casual / Office
+10490,Business Casual
 33612,DROP
-39328,Y2K
+39328,Edgy / Alternative
 41232,DROP
 11542,Traditional / Ethnic Wear
 56285,DROP
@@ -1776,7 +1776,7 @@ image_id,vibe
 2226,Athleisure
 43101,DROP
 18299,Traditional / Ethnic Wear
-13671,Techwear / Gorpcore
+13671,Edgy / Alternative
 27444,Athleisure
 26596,DROP
 50516,DROP
@@ -1797,9 +1797,9 @@ image_id,vibe
 25313,DROP
 40784,DROP
 36536,DROP
-52073,Smart Casual / Office
+52073,Business Casual
 58549,DROP
-14666,Smart Casual / Office
+14666,Business Casual
 33878,DROP
 44116,DROP
 5231,Casual Basics
@@ -1815,9 +1815,9 @@ image_id,vibe
 31713,DROP
 12591,Streetwear
 55256,DROP
-18897,Smart Casual / Office
+18897,Business Casual
 34261,Streetwear
-50724,Grunge
+50724,Edgy / Alternative
 2828,DROP
 22304,DROP
 16131,Casual Basics
@@ -1835,7 +1835,7 @@ image_id,vibe
 6672,DROP
 47555,DROP
 46487,DROP
-51430,Smart Casual / Office
+51430,Business Casual
 15572,Streetwear
 21747,DROP
 4125,Athleisure
@@ -1861,7 +1861,7 @@ image_id,vibe
 9408,DROP
 30635,Athleisure
 42215,Casual Basics
-3132,Smart Casual / Office
+3132,Business Casual
 34295,Traditional / Ethnic Wear
 18863,Casual Basics
 6440,DROP
@@ -1877,7 +1877,7 @@ image_id,vibe
 21111,Casual Basics
 40126,Streetwear
 24463,DROP
-10656,Y2K
+10656,Edgy / Alternative
 37848,DROP
 57191,Casual Basics
 56043,DROP
@@ -1897,7 +1897,7 @@ image_id,vibe
 51266,DROP
 6024,Streetwear
 47303,DROP
-26106,Smart Casual / Office
+26106,Business Casual
 12333,Casual Basics
 3764,Streetwear
 30063,DROP
@@ -1906,7 +1906,7 @@ image_id,vibe
 18609,Casual Basics
 35511,DROP
 49897,DROP
-16793,Smart Casual / Office
+16793,Business Casual
 51054,DROP
 50186,DROP
 17641,DROP
@@ -1916,7 +1916,7 @@ image_id,vibe
 47131,DROP
 37246,DROP
 5493,Streetwear
-15116,Smart Casual / Office
+15116,Business Formal
 59239,DROP
 21323,DROP
 36394,DROP
@@ -1928,15 +1928,15 @@ image_id,vibe
 25783,DROP
 27649,Streetwear
 16932,Casual Basics
-49636,Cottagecore
+49636,Boho / Cottagecore
 19146,Casual Basics
 55269,DROP
 2817,DROP
-7559,Smart Casual / Office
+7559,Business Casual
 25922,Casual Basics
 36509,DROP
 58576,Streetwear
-14659,Smart Casual / Office
+14659,Business Casual
 33847,DROP
 39541,DROP
 38493,Streetwear
@@ -1946,15 +1946,15 @@ image_id,vibe
 11925,DROP
 58744,Casual Basics
 41669,DROP
-39773,Smart Casual / Office
-11119,Smart Casual / Office
+39773,Business Casual
+11119,Business Formal
 5800,Streetwear
-33249,Smart Casual / Office
+33249,Business Casual
 2219,DROP
 34850,DROP
 54189,DROP
 35982,Casual Basics
-8723,Smart Casual / Office
+8723,Business Casual
 22935,DROP
 28433,DROP
 55867,DROP
@@ -1975,11 +1975,11 @@ image_id,vibe
 34408,Streetwear
 8175,DROP
 7901,Traditional / Ethnic Wear
-19522,Old Money / Quiet Luxury
+19522,Edgy / Alternative
 13018,DROP
 48380,Casual Basics
 43768,DROP
-8949,Smart Casual / Office
+8949,Business Casual
 13824,DROP
 28265,DROP
 58112,DROP
@@ -1993,9 +1993,9 @@ image_id,vibe
 15129,Casual Basics
 45659,DROP
 38231,DROP
-15915,Smart Casual / Office
+15915,Business Casual
 11589,Loungewear / Sleepwear
-26139,Smart Casual / Office
-51857,Smart Casual / Office
+26139,Business Formal
+51857,Business Casual
 49094,DROP
 48146,DROP
