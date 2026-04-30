@@ -21,7 +21,7 @@
 
 Style Vibe Classifier is a full-stack AI web app that reads an outfit photo and returns its internet aesthetic — *Streetwear*, *Traditional / Ethnic Wear*, *Athleisure*, and so on. A user uploads an image through a minimal React interface; a FastAPI backend runs it through a fine-tuned ResNet-50 vision model and returns the predicted aesthetic with a confidence score.
 
-The interesting part isn't the inference — it's how the training data was created. This project has gone through **four modeling iterations**, each solving a fundamental limitation of the one before it. Three trained models are available; the backend prompts you to select one at startup.
+The interesting part isn't the inference — it's how the training data was created. This project has gone through **four modeling iterations**, each solving a fundamental limitation of the one before it. The first (v0) was a Colab experiment and no longer exists; three trained models are available and the backend prompts you to select one at startup.
 
 ---
 
@@ -30,7 +30,7 @@ The interesting part isn't the inference — it's how the training data was crea
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────────┐
 │                                                                                          │
-│  v1 (Colab, 2024)     v2 (local MPS)          v3 (local MPS)        v4 (local MPS)       │
+│  v0 (Colab, 2024)     v1 (local MPS)          v2 (local MPS)        v3 (local MPS)       │
 │  ─────────────────    ──────────────           ──────────────        ──────────────      │
 │  Rule-based lookup ►  VLM labels every  ►      Embed → Cluster →  ► Web-scraped images   │
 │  table from        fix image directly   fix    VLM on centroids    fix per class from    │
@@ -67,7 +67,7 @@ The interesting part isn't the inference — it's how the training data was crea
 | Backend | FastAPI, Uvicorn, Python-Multipart |
 | ML Runtime | PyTorch 2.x, Apple MPS (M-series) |
 | Base Model | ResNet-50 (ImageNet pre-trained via `torchvision`) |
-| Dataset | [`ashraq/fashion-product-images-small`](https://huggingface.co/datasets/ashraq/fashion-product-images-small) — ~44k fashion product images (v1–v3) |
+| Dataset | [`ashraq/fashion-product-images-small`](https://huggingface.co/datasets/ashraq/fashion-product-images-small) — ~44k fashion product images (v0–v2) |
 | VLM Oracle | Gemini (`google-generativeai` SDK) |
 | Clustering | scikit-learn KMeans |
 | Image Search | DuckDuckGo Images (`ddgs`) |
@@ -76,11 +76,11 @@ The interesting part isn't the inference — it's how the training data was crea
 
 ## Dataset
 
-Models v1–v3 use [`ashraq/fashion-product-images-small`](https://huggingface.co/datasets/ashraq/fashion-product-images-small) from the Hugging Face Hub — a curated subset of a Kaggle fashion product dataset with **~44,000 product images** spanning clothing, accessories, footwear, and bags. The dataset skews heavily toward Indian fashion e-commerce, which is why Traditional / Ethnic Wear becomes a large natural cluster and niche Western aesthetics (Grunge, Y2K) are underrepresented. Model v4 replaces this dataset entirely with web-scraped editorial images.
+Models v0–v2 use [`ashraq/fashion-product-images-small`](https://huggingface.co/datasets/ashraq/fashion-product-images-small) from the Hugging Face Hub — a curated subset of a Kaggle fashion product dataset with **~44,000 product images** spanning clothing, accessories, footwear, and bags. The dataset skews heavily toward Indian fashion e-commerce, which is why Traditional / Ethnic Wear becomes a large natural cluster and niche Western aesthetics (Grunge, Y2K) are underrepresented. Model v3 replaces this dataset entirely with web-scraped editorial images.
 
 ---
 
-## Model Iteration 1 — Rule-Based Mapping
+## Model Iteration 0 — Rule-Based Mapping
 
 **Trained on:** Google Colab T4 GPU  
 **Serving model:** none (superseded)
@@ -100,13 +100,13 @@ A 4-class linear head was placed on top of `microsoft/resnet-50` and trained wit
 
 ---
 
-## Model Iteration 2 — Direct VLM Labeling
+## Model Iteration 1 — Direct VLM Labeling
 
 **Scripts:** `backend/scripts/1_my_vibe_model/`  
 **Artifacts:** `backend/1_my_vibe_model/`  
 **Selectable in `main.py`:** option `1` (default)
 
-To escape rule-based noise, v2 bypasses metadata entirely and asks a vision-language model to look at each image directly.
+To escape rule-based noise, v1 bypasses metadata entirely and asks a vision-language model to look at each image directly.
 
 ### Label Generation (`generate_data.py`)
 
@@ -172,11 +172,11 @@ Category Consolidation: 12 → 9 Classes
 - **Checkpointing:** Best val-accuracy epoch is saved; the file is never overwritten by a worse epoch
 - **Hardware:** Apple MPS (M-series MacBook Pro)
 
-**Limitation hit:** With ~685 training samples across 9 classes, fine-tuning `layer4` (~8M parameters) overfits. Train accuracy reaches ~98% while val accuracy stabilizes around 62–64%. The bottleneck is label quantity, not model capacity — which points directly to the v3 approach.
+**Limitation hit:** With ~685 training samples across 9 classes, fine-tuning `layer4` (~8M parameters) overfits. Train accuracy reaches ~98% while val accuracy stabilizes around 62–64%. The bottleneck is label quantity, not model capacity — which points directly to the v2 approach.
 
 ---
 
-## Model Iteration 3 — Embed-Cluster-Label (Semi-Supervised)
+## Model Iteration 2 — Embed-Cluster-Label (Semi-Supervised)
 
 **Scripts:** `backend/scripts/2_my_vibe_model/`  
 **Artifacts:** `backend/2_my_vibe_model/`  
@@ -275,13 +275,13 @@ More than half the dataset is accessories, footwear, handbags, and other non-clo
 
 ---
 
-## Model Iteration 4 — Web-Scraped Fine-Tune
+## Model Iteration 3 — Web-Scraped Fine-Tune
 
 **Scripts:** `backend/scripts/3_my_vibe_model/`  
 **Artifacts:** `backend/3_my_vibe_model/`  
 **Selectable in `main.py`:** option `3`
 
-v3's 83% accuracy came with a catch: all training data still originates from the same HF product-image dataset. Niche aesthetics absent from that dataset (Loungewear, Business Formal, Edgy / Alternative) remain poorly represented in propagated labels. v4 bypasses the dataset entirely — training images are scraped directly from the web for each class, giving clean and visually representative samples with zero VLM calls.
+v2's 83% accuracy came with a catch: all training data still originates from the same HF product-image dataset. Niche aesthetics absent from that dataset (Loungewear, Business Formal, Edgy / Alternative) remain poorly represented in propagated labels. v3 bypasses the dataset entirely — training images are scraped directly from the web for each class, giving clean and visually representative samples with zero VLM calls.
 
 ### The Two-Script Pipeline
 
@@ -343,12 +343,12 @@ Both phases use `CosineAnnealingLR` (one cosine cycle per phase) and `CrossEntro
 style-vibe-classifier/
 │
 ├── backend/
-│   ├── 1_my_vibe_model/                  # Model 2 artifacts (direct VLM labeling)
+│   ├── 1_my_vibe_model/                  # Model 1 artifacts (direct VLM labeling)
 │   │   ├── synthetic_aesthetics.csv      # ~5,400 Gemini-labeled rows (with DROPs)
 │   │   ├── resnet50_vibe.pt              # trained weights
 │   │   └── label_classes.json            # ordered list of 9 class names
 │   │
-│   ├── 2_my_vibe_model/                  # Model 3 artifacts (Embed-Cluster-Label)
+│   ├── 2_my_vibe_model/                  # Model 2 artifacts (Embed-Cluster-Label)
 │   │   ├── embeddings.npy                # (44k, 2048) float32 embedding matrix
 │   │   ├── image_ids.json                # ordered list of HF image IDs
 │   │   ├── cluster_assignments.csv       # every image → cluster_id, centroid_rank, dist
@@ -356,7 +356,7 @@ style-vibe-classifier/
 │   │   ├── model_v3.pt                   # trained weights
 │   │   └── classes.json                  # int → aesthetic string map
 │   │
-│   ├── 3_my_vibe_model/                  # Model 4 artifacts (web-scraped fine-tune)
+│   ├── 3_my_vibe_model/                  # Model 3 artifacts (web-scraped fine-tune)
 │   │   ├── training_data/                # ~1,751 images organized by class folder
 │   │   ├── model.pt                      # trained weights
 │   │   └── classes.json                  # int → aesthetic string map
@@ -364,19 +364,19 @@ style-vibe-classifier/
 │   ├── scripts/
 │   │   ├── .env                          # GEMINI_API_KEY + HF_TOKEN (not committed)
 │   │   │
-│   │   ├── 1_my_vibe_model/              # Scripts for Model 2
+│   │   ├── 1_my_vibe_model/              # Scripts for Model 1
 │   │   │   ├── generate_data.py          # Gemini VLM labeling pipeline (resumable)
 │   │   │   ├── remap_labels.py           # 12→9 class consolidation + Gemini re-split
 │   │   │   ├── train_student.py          # ResNet-50 fine-tuning (MPS)
 │   │   │   ├── eval_student.py           # val-set report + single-image inference
 │   │   │   └── eda_audit.ipynb           # distribution plots, drop rate, sample grids
 │   │   │
-│   │   ├── 2_my_vibe_model/              # Scripts for Model 3 (run in order)
+│   │   ├── 2_my_vibe_model/              # Scripts for Model 2 (run in order)
 │   │   │   ├── 1_embed_and_cluster.py    # ResNet-50 embeddings + KMeans(k=100)
 │   │   │   ├── 2_vlm_label_propagation.py# VLM on 300 centroids + majority vote
 │   │   │   └── 3_train_model_v3.py       # fine-tune ResNet-50 on 41k labels
 │   │   │
-│   │   └── 3_my_vibe_model/              # Scripts for Model 4 (run in order)
+│   │   └── 3_my_vibe_model/              # Scripts for Model 3 (run in order)
 │   │       ├── 1_fetch_training_images.py# DuckDuckGo scraper (resumable)
 │   │       └── 2_train.py                # two-phase ResNet-50 fine-tune
 │   │
@@ -419,9 +419,9 @@ cd backend && uvicorn main:app --reload
 **Model selection prompt at startup:**
 ```
 Which model would you like to load?
-  1 — Model 2: Direct VLM labeling        (9 classes, ~5k labels,  resnet50_vibe.pt)
-  2 — Model 3: Embed-Cluster-Label         (6 classes, ~44k labels, model_v3.pt)
-  3 — Model 4: Web-scraped fine-tune       (9 classes, ~1.8k imgs,  model.pt)
+  1 — Model 1: Direct VLM labeling        (9 classes, ~5k labels,  resnet50_vibe.pt)
+  2 — Model 2: Embed-Cluster-Label         (6 classes, ~44k labels, model_v3.pt)
+  3 — Model 3: Web-scraped fine-tune       (9 classes, ~1.8k imgs,  model.pt)
 Enter 1, 2, or 3:
 ```
 
@@ -449,7 +449,7 @@ GEMINI_API_KEY=your_gemini_api_key
 
 ## Reproducing the Pipelines
 
-### Model 2 — Direct VLM Labeling
+### Model 1 — Direct VLM Labeling
 
 ```bash
 cd backend/scripts/1_my_vibe_model
@@ -468,7 +468,7 @@ python eval_student.py
 python eval_student.py --image /path/to/photo.jpg
 ```
 
-### Model 3 — Embed-Cluster-Label
+### Model 2 — Embed-Cluster-Label
 
 ```bash
 cd backend/scripts/2_my_vibe_model
@@ -485,7 +485,7 @@ python 2_vlm_label_propagation.py
 python 3_train_model_v3.py
 ```
 
-### Model 4 — Web-Scraped Fine-Tune
+### Model 3 — Web-Scraped Fine-Tune
 
 ```bash
 cd backend/scripts/3_my_vibe_model
@@ -511,20 +511,20 @@ A single centroid image can be a boundary case — visually ambiguous between tw
 **Why are 6 classes in v3 fewer than the 9 in v2, even with 100 clusters?**  
 The dataset's true composition is the limiting factor. Niche Western aesthetics (Y2K, Grunge, Cottagecore, Old Money) simply don't have enough images in this particular dataset to form their own dense clusters. A 14× class imbalance (Casual Basics vs. Boho Chic) is what the dataset actually contains — no amount of re-clustering changes that.
 
-**Why `CosineAnnealingWarmRestarts` in v3 but not v2?**  
-In v2, with ~685 training samples, the main problem was overfitting — adding LR restarts would have made it worse. In v3, with 41k samples, the training is stable enough that warm restarts help the optimizer escape the flat regions introduced by label noise at cluster boundaries.
+**Why `CosineAnnealingWarmRestarts` in v2 but not v1?**  
+In v1, with ~685 training samples, the main problem was overfitting — adding LR restarts would have made it worse. In v2, with 41k samples, the training is stable enough that warm restarts help the optimizer escape the flat regions introduced by label noise at cluster boundaries.
 
-**Why two phases in v4 instead of one?**  
+**Why two phases in v3 instead of one?**  
 With only ~1,751 training images, training `layer4` from the start risks overfitting before the head has stabilized. Phase 1 freezes the backbone for 10 epochs so the head converges to a reasonable starting point; Phase 2 then fine-tunes `layer4` at a lower LR. This is the standard progressive unfreezing strategy and is especially important at small data scales.
 
-**Why use DuckDuckGo instead of a structured fashion dataset for v4?**  
+**Why use DuckDuckGo instead of a structured fashion dataset for v3?**  
 DuckDuckGo Images requires no API key and returns real editorial and lookbook photos — exactly the kind of in-context images the classifier will see at inference. The tradeoff is that the scraper can run dry on niche queries, and query phrasing introduces a bias toward certain visual styles within each class.
 
 ---
 
 ## Model Comparison
 
-| | v1 Rule-Based | v2 Direct VLM | v3 Embed-Cluster-Label | v4 Web-Scraped |
+| | v0 Rule-Based | v1 Direct VLM | v2 Embed-Cluster-Label | v3 Web-Scraped |
 |---|---|---|---|---|
 | **Directory** | — (Colab) | `1_my_vibe_model/` | `2_my_vibe_model/` | `3_my_vibe_model/` |
 | **Labeling method** | Rule-based lookup | Gemini — every image | Gemini — 300 centroids only | DuckDuckGo image search |
