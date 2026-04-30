@@ -153,25 +153,13 @@ for cid in range(N_CLUSTERS):
     top_k  = min(CENTROIDS_PER_CLUSTER, len(order))
 
     for rank, pos in enumerate(order):
-        global_idx    = idxs[pos]
-        centroid_rank = rank + 1 if rank < top_k else 0
-        records.append({
-            "image_id":     image_ids[global_idx],
-            "cluster_id":   int(cid),
-            "dist_to_center": float(dists[pos]),
-            "centroid_rank":  int(centroid_rank) if rank < top_k else 0,
-            "is_centroid":    int(rank < top_k),
-        })
-
-    # Non-centroid members — add them with rank 0
-    for rank, pos in enumerate(order[top_k:], start=top_k):
         global_idx = idxs[pos]
         records.append({
-            "image_id":     image_ids[global_idx],
-            "cluster_id":   int(cid),
+            "image_id":       image_ids[global_idx],
+            "cluster_id":     int(cid),
             "dist_to_center": float(dists[pos]),
-            "centroid_rank":  0,
-            "is_centroid":    0,
+            "centroid_rank":  rank + 1 if rank < top_k else 0,
+            "is_centroid":    int(rank < top_k),
         })
 
 df = pd.DataFrame(records)

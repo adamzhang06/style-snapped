@@ -370,7 +370,7 @@ export default function App() {
                 <img
                   src={preview}
                   alt="Outfit preview"
-                  className="w-full max-h-72 object-cover"
+                  className="w-full max-h-72 object-contain bg-zinc-950"
                 />
                 <button
                   onClick={reset}

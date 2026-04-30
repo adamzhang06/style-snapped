@@ -2,6 +2,7 @@
 *.pt
 *.npy
 *.safetensors
+backend/3_my_vibe_model/training_data
 
 #
 /.claude

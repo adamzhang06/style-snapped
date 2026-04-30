@@ -1,5 +1,21 @@
 Files excluded from GitHub (too large) — share these manually with your partner:
 
-backend/1_my_vibe_model/resnet50_vibe.pt       (~50-90 MB)  Model 1 weights
-backend/2_my_vibe_model/embeddings.npy          (344 MB)     ResNet-50 embeddings for all ~88k images
-backend/2_my_vibe_model/model_v3.pt             (90 MB)      Model 2 weights
+MODEL WEIGHTS
+─────────────────────────────────────────────────────────────────────────────
+backend/1_my_vibe_model/resnet50_vibe.pt       (~90 MB)   Model 1 weights
+backend/2_my_vibe_model/model_v3.pt            (~90 MB)   Model 2 weights (needs retrain)
+backend/3_my_vibe_model/model.pt               (~90 MB)   Model 3 weights  ← best model
+
+EMBEDDINGS / LARGE DATA
+─────────────────────────────────────────────────────────────────────────────
+backend/2_my_vibe_model/embeddings.npy         (~340 MB)  ResNet-50 embeddings for all ~44k images
+                                                           (only needed to re-run Script 1 for Model 2)
+
+TRAINING DATA (web-scraped images, ~1,751 images total)
+─────────────────────────────────────────────────────────────────────────────
+backend/3_my_vibe_model/training_data/         (~200 MB)  ~200 images per category × 9 categories
+                                                           Re-scrape with:
+                                                           python backend/scripts/3_my_vibe_model/1_fetch_training_images.py
+
+NOTE: All *.pt and *.npy files are covered by .gitignore.
+      The training_data/ folder should also be added to .gitignore if not already.
