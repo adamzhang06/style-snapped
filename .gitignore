@@ -3,6 +3,7 @@
 *.npy
 *.safetensors
 backend/3_my_vibe_model/training_data
+backend/demo_images/3_my_vibe_model/_symposium_candidates
 
 #
 /.claude
