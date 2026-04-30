@@ -1,6 +1,6 @@
 <div align="center">
 
-# Style Vibe Classifier
+# Style Snapped
 
 **Drop in an outfit photo. Get back an aesthetic.**
 
@@ -19,7 +19,7 @@
 
 ## What It Does
 
-Style Vibe Classifier is a full-stack AI web app that reads an outfit photo and returns its internet aesthetic — *Streetwear*, *Traditional / Ethnic Wear*, *Athleisure*, and so on. A user uploads an image through a minimal React interface; a FastAPI backend runs it through a fine-tuned ResNet-50 vision model and returns the predicted aesthetic with a confidence score.
+Style Snapped is a full-stack AI web app that reads an outfit photo and returns its internet aesthetic — *Streetwear*, *Traditional / Ethnic Wear*, *Athleisure*, and so on. A user uploads an image through a minimal React interface; a FastAPI backend runs it through a fine-tuned ResNet-50 vision model and returns the predicted aesthetic with a confidence score.
 
 The interesting part isn't the inference — it's how the training data was created. This project has gone through **four modeling iterations**, each solving a fundamental limitation of the one before it. The first (v0) was a Colab experiment and no longer exists; three trained models are available and the backend prompts you to select one at startup.
 
@@ -340,7 +340,7 @@ Both phases use `CosineAnnealingLR` (one cosine cycle per phase) and `CrossEntro
 ## Project Structure
 
 ```
-style-vibe-classifier/
+style-snapped/
 │
 ├── backend/
 │   ├── 1_my_vibe_model/                  # Model 1 artifacts (direct VLM labeling)
